@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<scheme>
+    <nodes>
+        <node name="node 0"/>
+        <node name="node 1"/>
+        <node name="node 2"/>
+        <node name="node 3"/>
+        <node name="node 4"/>
+        <node name="node 5"/>
+        <node name="node 6"/>
+    </nodes>
+    <devices>
+        <voltageSource name="E1">
+            <voltage>220</voltage>
+            <phase>0</phase>
+        </voltageSource>
+        <voltageSource name="E2">
+            <voltage>220</voltage>
+            <phase>-120</phase>
+        </voltageSource>
+        <voltageSource name="E3">
+            <voltage>220</voltage>
+            <phase>120</phase>
+        </voltageSource>
+
+        <inductance name="L1">
+            <resistance>10</resistance>
+        </inductance>
+        <inductance name="L2">
+            <resistance>10</resistance>
+        </inductance>
+        <inductance name="L3">
+            <resistance>10</resistance>
+        </inductance>
+
+        <resistance name="R1">
+            <resistance>10</resistance>
+        </resistance>
+        <resistance name="R2">
+            <resistance>10</resistance>
+        </resistance>
+        <resistance name="R3">
+            <resistance>10</resistance>
+        </resistance>
+    </devices>
+
+    <connections>
+        <connection element="E1">
+            <startNode name="node 0"/>
+            <finishNode name="node 1"/>
+        </connection>
+        <connection element="E2">
+            <startNode name="node 0"/>
+            <finishNode name="node 3"/>
+        </connection>
+        <connection element="E3">
+            <startNode name="node 0"/>
+            <finishNode name="node 5"/>
+        </connection>
+
+        <connection element="L1">
+            <startNode name="node 1"/>
+            <finishNode name="node 2"/>
+        </connection>
+        <connection element="L2">
+            <startNode name="node 3"/>
+            <finishNode name="node 4"/>
+        </connection>
+        <connection element="L3">
+            <startNode name="node 5"/>
+            <finishNode name="node 6"/>
+        </connection>
+
+        <connection element="R1">
+            <startNode name="node 2"/>
+            <finishNode name="node 0"/>
+        </connection>
+        <connection element="R2">
+            <startNode name="node 4"/>
+            <finishNode name="node 0"/>
+        </connection>
+        <connection element="R3">
+            <startNode name="node 6"/>
+            <finishNode name="node 0"/>
+        </connection>
+    </connections>
+</scheme>
